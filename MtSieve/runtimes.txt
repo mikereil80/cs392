@@ -1,0 +1,19 @@
+./mtsieve -s100 -e200000000 -t1 : 0m16.408s
+
+./mtsieve -s100 -e200000000 -t2 : 0m16.426s
+
+./mtsieve -s100 -e200000000 -t3 : 0m17.332s
+
+./mtsieve -s100 -e200000000 -t4 : 0m16.797s
+
+./mtsieve -s100 -e200000000 -t5 : 0m17.081s
+
+./mtsieve -s100 -e200000000 -t6 : 0m16.805s
+
+./mtsieve -s100 -e200000000 -t7 : 0m17.414s
+
+./mtsieve -s100 -e200000000 -t8 : 0m17.491s
+
+CPU Model: Intel(R) Core(TM) i5-6300HQ CPU @ 2.30GHz
+
+With the time appears to very slowly decrease linearly as the number of threads increases. As seen by the above results, the time it takes 1 threads to run is 0m16.408s whereas with 8 threads it takes 0m17.491s time to run. This is about a 1 sec slow down due to more threads. This shows that even though my code slightly slows down, it is pretty similar in runtime regardless of the number of threads executed, which is likely down to mtsieve implementation being slow overall.
